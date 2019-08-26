@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>消息</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/icons-extra.css">
+		<link rel="stylesheet" href="../css/app.css" />
+		<script type="text/javascript" src="../js/config.js" ></script>
+		<style type="text/css">
+			.mtime{float: right;font-size: 14px;color:#8f8f94;}
+			.mui-table-view .mui-media-object {
+			    border-radius: 3px;
+			}
+			.mui-content>.mui-table-view:first-child {
+			    margin-top: 0px;
+			}
+			.mui-media-body{height: 42px;}
+			.bodytop{width: 100%;height: 24px;}
+			.bodybot{width: 100%;}
+			.bodybot p{width: 85%;float: left;}
+			.bodybot span{float: right;}
+		</style>
+		<style>
+			#topPopover {
+				position: fixed;
+				top: 16px;
+				right: 6px;
+			}
+			#topPopover .mui-popover-arrow {
+				left: auto;
+				right: 6px;
+			}
+			.mui-popover {
+				height: 145px;
+				width:128px;
+			}
+			.mui-content {
+				padding: 10px;
+			}
+			.mui-backdrop {
+			    position: fixed;
+			    z-index: 998;
+			    top:45px;
+			    right: 0;
+			    bottom: 0;
+			    left: 0; 
+			    background-color: rgba(255,255,255,0);
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<h1 id="title" class="mui-title">消息</h1>
+			 <a class="mui-icon mui-icon-plus mui-pull-right" href="#topPopover"></a>
+			<!-- <a href="search.html" class="mui-pull-right mui-icon mui-icon-search" style="color: white;font-size: 25px;"></a> -->
+		</header>
+		<!--右上角弹出菜单-->
+		<div id="topPopover" class="mui-popover">
+		    <div class="mui-popover-arrow"></div>
+		    <div class="mui-scroll-wrapper">
+		        <div class="mui-scroll">
+		            <ul class="mui-table-view" id="add">
+		                <li class="mui-table-view-cell">
+							<a href="search.html"><span class="mui-icon-extra mui-icon-extra-addpeople" style="color: black;"></span> 添加好友</a>
+						</li>
+		                <li class="mui-table-view-cell">
+							<a id="icon-chatbubble" href="groups.html"><span class="mui-icon mui-icon-chatbubble"></span> 发起群聊</a>
+						</li>
+		                <li class="mui-table-view-cell">
+							<a href="scan.html"><span class="mui-icon-extra mui-icon-extra-sweep"></span> 扫一扫</a>
+						</li>
+		            </ul>
+		        </div>
+		    </div>
+		</div>
+		<img id="nullmsg" src="../images/nullmsg.png" style="width: 130px;position: fixed;z-index: 999;top: 150px;left: 50%;margin-left: -65px;"/>
+		<div class="mui-content">
+			<div class="mui-input-row mui-search">
+				<input type="search" class="mui-input-clear search" onfocus="enterSearch(event)" placeholder="搜索">
+			</div>
+	    	<ul class="mui-table-view" id="msgtips"></ul>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../libs/message.js" ></script>
+	</body> 
+
+</html>
